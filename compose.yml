@@ -1,7 +1,7 @@
 ---
 services:
   db:
-    image: kiran84:db
+    image: kiran84/flm2027:db
     deploy:
       replicas: 1
     ports:
@@ -10,7 +10,7 @@ services:
       - mynetwork
 
   auth_service:
-    image: kiran84:auth
+    image: kiran84/flm2027:auth
     deploy:
       replicas: 1
     ports:
@@ -22,7 +22,7 @@ services:
     
 
   book_service:
-    image: kiran84:book
+    image: kiran84/flm2027:book
     deploy:
       replicas: 1
     ports:
@@ -32,7 +32,7 @@ services:
     depends_on:
       - db
   borrow_service:
-    image: kiran84:borrow
+    image: kiran84/flm2027:borrow
     deploy:
       replicas: 1
     ports:
@@ -43,7 +43,7 @@ services:
       - db
 
   frontend:
-    image: kiran84:frontend
+    image: kiran84/flm2027:frontend
     deploy:
       replicas: 1
     ports:
