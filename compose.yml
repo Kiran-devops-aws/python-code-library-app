@@ -48,4 +48,5 @@ services:
 
 networks:
   mynetwork:
-    driver: bridge
+    driver: overlay
+    attachable: true
