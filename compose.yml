@@ -2,14 +2,14 @@ version: '3.8'
 
 services:
   db:
-    image: kiran84/flm2027:db
+    image: kiran84/flm2026:db
     ports:
       - "3306:3306"
     networks:
       - mynetwork
 
   auth_service:
-    image: kiran84/flm2027:auth
+    image: kiran84/flm2026:auth
     ports:
       - "5001:5001"
     networks:
@@ -18,7 +18,7 @@ services:
       - db
 
   book_service:
-    image: kiran84/flm2027:book
+    image: kiran84/flm2026:book
     ports:
       - "5002:5002"
     networks:
@@ -27,7 +27,7 @@ services:
       - db
 
   borrow_service:
-    image: kiran84/flm2027:borrow
+    image: kiran84/flm2026:borrow
     ports:
       - "5003:5003"
     networks:
@@ -36,7 +36,7 @@ services:
       - db
 
   frontend:
-    image: kiran84/flm2027:frontend
+    image: kiran84/flm2026:frontend
     ports:
       - "5000:5000"
     networks:
